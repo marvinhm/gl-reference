@@ -81,6 +81,7 @@ export default function ReactHookForm() {
                   message: "First Name must be 2 characters minimum",
                 },
               })}
+              data-testid="p-fname-input"
               placeholder="First Name"
               className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
@@ -102,6 +103,7 @@ export default function ReactHookForm() {
                   message: "Last Name must be 2 characters minimum",
                 },
               })}
+              data-testid="p-lname-input"
               placeholder="Last Name"
               className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
@@ -119,6 +121,7 @@ export default function ReactHookForm() {
               {...register("personal.current_address", {
                 required: "Your address is required",
               })}
+              data-testid="p-address-input"
               placeholder="Current Address"
               className="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
@@ -143,6 +146,7 @@ export default function ReactHookForm() {
                     {...register(`employer.${index}.name`, {
                       required: "Employer Name is required",
                     })}
+                    data-testid="e-name-input"
                     defaultValue={field.value}
                     key={field.id}
                     placeholder="Employer Name"
@@ -156,6 +160,7 @@ export default function ReactHookForm() {
                 </div>
                 <div className="checkb-block mb-3 flex">
                   <input
+                  data-testid="e-current-emp-input"
                     type="checkbox"
                     onChange={() => setCurrentEmp(!currentEmp)}
                     className="mr-3"
@@ -173,6 +178,7 @@ export default function ReactHookForm() {
                       {...register(`employer.${index}.start_date`, {
                         required: "Employment Start date is required",
                       })}
+                      data-testid="e-sdate-input"
                       type="date"
                       id="start_date"
                       defaultValue={field.value}
@@ -196,6 +202,7 @@ export default function ReactHookForm() {
                           message: "Employment End date is required",
                         },
                       })}
+                      data-testid="e-edate-input"
                       type="date"
                       id="end_date"
                       defaultValue={field.value}
@@ -220,6 +227,7 @@ export default function ReactHookForm() {
             isSubmitting ? "cursor-not-allowed" : ""
           }`}
           type="submit"
+          data-testid="form-button"
         >
           Submit
         </button>

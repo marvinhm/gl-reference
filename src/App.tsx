@@ -7,7 +7,7 @@ import ReactHookForm from './ReactHookForm';
 
 export const Header: React.FC<{title: string, subTitle: string}> = ({ title, subTitle }) => (
   <div className='mb-5'>
-    <h1 className='text-3xl font-bold'>{title}</h1>
+    <h1 data-testid="main-title"  className='text-3xl font-bold'>{title}</h1>
     <h4 className='text-2xl'>{subTitle}</h4>
   </div>
 )
