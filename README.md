@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# Getting Started with GL Reference App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A form that collects the following information and submits it to a given api endpoint
+
+We are using:
+- React/TypeScript
+- React-Hook-Form
+
 
 ## Available Scripts
 
